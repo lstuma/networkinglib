@@ -8,6 +8,7 @@ Python Networking Module
 ```
 from networkinglib import tcp
 socket = tcp.connect('127.0.0.1', 7777)
+if not socket: print("Could not connect!")
 ```
 
 #### Sending packet
