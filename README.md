@@ -1,25 +1,27 @@
-# tcp_client
-Python TCP Client
+# networkinglib
+Python Networking Module
 
 ## How to use
 
-### Connecting to server
+### TCP Client
+#### Connecting to server
 ```
-import tcp_client as tcp
+from networkinglib import tcp
 socket = tcp.connect('127.0.0.1', 7777)
+if not socket: print("Could not connect!")
 ```
 
-### Sending packet
+#### Sending packet
 ```
-tcp.send("Hello Server!", socket)
-```
-
-### Receiving Packets
-```
-print(tcp.receive(socket))
+socket.send("Hello Server!")
 ```
 
-### Closing connection
+#### Receiving Packets
 ```
-tcp.close(socket)
+print(socket.receive())
+```
+
+#### Closing connection
+```
+socket.close()
 ```
