@@ -6,21 +6,21 @@ Python Networking Module
 ### TCP Client
 #### Connecting to server
 ```
-import tcp_client as tcp
+from networkinglib import tcp
 socket = tcp.connect('127.0.0.1', 7777)
 ```
 
 #### Sending packet
 ```
-tcp.send("Hello Server!", socket)
+socket.send("Hello Server!")
 ```
 
 #### Receiving Packets
 ```
-print(tcp.receive(socket))
+print(socket.receive())
 ```
 
 #### Closing connection
 ```
-tcp.close(socket)
+socket.close()
 ```
